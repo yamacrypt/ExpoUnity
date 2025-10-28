@@ -1,0 +1,62 @@
+plugins {
+  id 'com.android.application'
+  id 'org.jetbrains.kotlin.android'
+}
+
+android {
+  namespace 'com.example.expounity'
+  compileSdkVersion rootProject.ext.compileSdkVersion
+
+  defaultConfig {
+    applicationId 'com.example.expounity'
+    minSdkVersion rootProject.ext.minSdkVersion
+    targetSdkVersion rootProject.ext.targetSdkVersion
+    versionCode 1
+    versionName '1.0.0'
+    vectorDrawables.useSupportLibrary = true
+  }
+
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+    }
+  }
+
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_17
+    targetCompatibility JavaVersion.VERSION_17
+  }
+  kotlinOptions {
+    jvmTarget = '17'
+  }
+
+  packagingOptions {
+    resources {
+      excludes += ['META-INF/*.kotlin_module']
+    }
+  }
+
+  buildFeatures {
+    buildConfig true
+  }
+}
+
+project.afterEvaluate {
+  if (project(':unityLibrary') != null) {
+    println('[Unity] Configuring dependency on :unityLibrary')
+    dependencies {
+      implementation project(':unityLibrary')
+    }
+  }
+}
+
+dependencies {
+  implementation fileTree(dir: 'libs', include: ['*.jar'])
+  implementation("com.facebook.react:react-android:${rootProject.ext.rnGradlePluginVersion}")
+  implementation 'androidx.appcompat:appcompat:1.7.0'
+  implementation 'androidx.core:core-ktx:1.13.1'
+  implementation 'com.google.android.material:material:1.12.0'
+}
+
+apply from: file("../../node_modules/react-native/scripts/react_native_gradle_plugin_android.gradle")

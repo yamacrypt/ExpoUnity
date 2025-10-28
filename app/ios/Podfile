@@ -1,0 +1,55 @@
+require File.expand_path('../node_modules/react-native/scripts/react_native_pods', __dir__)
+require File.expand_path('../node_modules/@react-native-community/cli-platform-ios/native_modules', __dir__)
+
+platform :ios, '13.4'
+install! 'cocoapods', :deterministic_uuids => false
+
+use_frameworks! :linkage => :static
+
+production = ENV['PRODUCTION'] == '1'
+
+linkage = ENV['USE_FRAMEWORKS'] == 'dynamic' ? :dynamic : :static
+
+workspace = Pod::Config.instance.project_root + '/ExpoUnity.xcworkspace'
+
+use_frameworks! :linkage => linkage
+
+pre_install do |installer|
+  Pod::UI.puts 'ℹ️  Enabling Flipper only in Debug'
+end
+
+post_install do |installer|
+  react_native_post_install(
+    installer,
+    :mac_catalyst_enabled => false,
+    :flipper_configuration => FlipperConfiguration.disabled
+  )
+  __apply_Xcode_12_5_M1_post_install_workaround(installer)
+end
+
+project 'ExpoUnity', {
+  'ExpoUnity' => :debug,
+}
+
+target 'ExpoUnity' do
+  use_expo_modules!
+  config = use_native_modules!
+
+  use_react_native!(
+    :path => '../node_modules/react-native',
+    :hermes_enabled => true,
+    :fabric_enabled => false,
+    :app_path => File.dirname(__dir__)
+  )
+
+  pod 'expo-dev-client', :path => '../node_modules/expo-dev-client'
+
+  post_install do |installer|
+    installer.pods_project.targets.each do |target|
+      target.build_configurations.each do |config|
+        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.4'
+        config.build_settings['CLANG_CXX_LANGUAGE_STANDARD'] = 'gnu++20'
+      end
+    end
+  end
+end

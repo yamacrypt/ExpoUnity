@@ -1,0 +1,51 @@
+{
+  "expo": {
+    "name": "ExpoUnity",
+    "slug": "expo-unity",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "expounity",
+    "userInterfaceStyle": "automatic",
+    "jsEngine": "hermes",
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "enableProguardInReleaseBuilds": true,
+            "extraMavenRepos": []
+          },
+          "ios": {
+            "useFrameworks": "static"
+          }
+        }
+      ]
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.example.expounity",
+      "infoPlist": {
+        "UILaunchStoryboardName": "SplashScreen"
+      }
+    },
+    "android": {
+      "package": "com.example.expounity",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single"
+    },
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}

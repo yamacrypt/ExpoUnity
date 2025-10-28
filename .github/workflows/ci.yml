@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, feat/** ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      TZ: Asia/Tokyo
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+      - name: Install root dependencies
+        run: npm install
+      - name: Install app workspace
+        run: npm install --workspace app
+      - name: Install web workspace
+        run: npm install --workspace web
+      - name: Install shared workspace
+        run: npm install --workspace packages/shared
+      - name: Lint
+        run: npm run lint
+      - name: Typecheck
+        run: npm run typecheck
+      - name: Build web
+        run: npm run build:web
+      - name: Android task listing
+        working-directory: app/android
+        run: ./gradlew :app:tasks --all
+      - name: iOS pod install dry run
+        working-directory: app/ios
+        run: pod install --project-directory=.

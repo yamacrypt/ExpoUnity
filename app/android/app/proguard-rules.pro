@@ -1,0 +1,2 @@
+-keep class com.example.expounity.unity.** { *; }
+-keep class com.example.expounity.modules.unitybridge.** { *; }

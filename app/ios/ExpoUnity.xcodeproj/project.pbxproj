@@ -1,0 +1,220 @@
+// !$*UTF8*$!
+{
+  archiveVersion = 1;
+  classes = {};
+  objectVersion = 56;
+  objects = {
+
+/* Begin PBXBuildFile section */
+    1D1A0F6E2C9BD84000C05E3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1A0F6D2C9BD84000C05E3F /* AppDelegate.swift */; };
+    1D1A0F702C9BD84200C05E3F /* UnityBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1A0F6F2C9BD84200C05E3F /* UnityBridge.swift */; };
+    1D1A0F722C9BD84300C05E3F /* UnityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1A0F712C9BD84300C05E3F /* UnityViewController.swift */; };
+    1D1A0F752C9BD84400C05E3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D1A0F732C9BD84400C05E3F /* Assets.xcassets */; };
+    1D1A0F772C9BD84500C05E3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D1A0F742C9BD84400C05E3F /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+    1D1A0F662C9BD83F00C05E3F /* ExpoUnity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpoUnity.app; sourceTree = BUILT_PRODUCTS_DIR; };
+    1D1A0F6D2C9BD84000C05E3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+    1D1A0F6F2C9BD84200C05E3F /* UnityBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnityBridge.swift; sourceTree = "<group>"; };
+    1D1A0F712C9BD84300C05E3F /* UnityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnityViewController.swift; sourceTree = "<group>"; };
+    1D1A0F732C9BD84400C05E3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+    1D1A0F742C9BD84400C05E3F /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+    1D1A0F762C9BD84500C05E3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+    1D1A0F632C9BD83F00C05E3F /* Frameworks */ = {
+      isa = PBXFrameworksBuildPhase;
+      buildActionMask = 2147483647;
+      files = (
+      );
+      runOnlyForDeploymentPostprocessing = 0;
+    };
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+    1D1A0F5D2C9BD83F00C05E3F = {
+      isa = PBXGroup;
+      children = (
+        1D1A0F6C2C9BD83F00C05E3F /* ExpoUnity */,
+        1D1A0F672C9BD83F00C05E3F /* Products */,
+      );
+      sourceTree = "<group>";
+    };
+    1D1A0F672C9BD83F00C05E3F /* Products */ = {
+      isa = PBXGroup;
+      children = (
+        1D1A0F662C9BD83F00C05E3F /* ExpoUnity.app */,
+      );
+      name = Products;
+      sourceTree = "<group>";
+    };
+    1D1A0F6C2C9BD83F00C05E3F /* ExpoUnity */ = {
+      isa = PBXGroup;
+      children = (
+        1D1A0F6D2C9BD84000C05E3F /* AppDelegate.swift */,
+        1D1A0F6F2C9BD84200C05E3F /* UnityBridge.swift */,
+        1D1A0F712C9BD84300C05E3F /* UnityViewController.swift */,
+        1D1A0F732C9BD84400C05E3F /* Assets.xcassets */,
+        1D1A0F742C9BD84400C05E3F /* LaunchScreen.storyboard */,
+        1D1A0F762C9BD84500C05E3F /* Info.plist */,
+      );
+      path = ExpoUnity;
+      sourceTree = "<group>";
+    };
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+    1D1A0F652C9BD83F00C05E3F /* ExpoUnity */ = {
+      isa = PBXNativeTarget;
+      buildConfigurationList = 1D1A0F7C2C9BD84600C05E3F /* Build configuration list for PBXNativeTarget "ExpoUnity" */;
+      buildPhases = (
+        1D1A0F622C9BD83F00C05E3F /* Sources */,
+        1D1A0F632C9BD83F00C05E3F /* Frameworks */,
+        1D1A0F642C9BD83F00C05E3F /* Resources */,
+      );
+      buildRules = (
+      );
+      dependencies = (
+      );
+      name = ExpoUnity;
+      productName = ExpoUnity;
+      productReference = 1D1A0F662C9BD83F00C05E3F /* ExpoUnity.app */;
+      productType = "com.apple.product-type.application";
+    };
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+    1D1A0F5E2C9BD83F00C05E3F /* Project object */ = {
+      isa = PBXProject;
+      attributes = {
+        LastUpgradeCheck = 1500;
+        TargetAttributes = {
+          1D1A0F652C9BD83F00C05E3F = {
+            DevelopmentTeam = "";
+            ProvisioningStyle = Automatic;
+          };
+        };
+      };
+      buildConfigurationList = 1D1A0F602C9BD83F00C05E3F /* Build configuration list for PBXProject "ExpoUnity" */;
+      compatibilityVersion = "Xcode 15.0";
+      developmentRegion = en;
+      hasScannedForEncodings = 0;
+      knownRegions = (
+        en,
+        Base,
+      );
+      mainGroup = 1D1A0F5D2C9BD83F00C05E3F;
+      productRefGroup = 1D1A0F672C9BD83F00C05E3F /* Products */;
+      projectDirPath = "";
+      projectRoot = "";
+      targets = (
+        1D1A0F652C9BD83F00C05E3F /* ExpoUnity */,
+      );
+    };
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+    1D1A0F642C9BD83F00C05E3F /* Resources */ = {
+      isa = PBXResourcesBuildPhase;
+      buildActionMask = 2147483647;
+      files = (
+        1D1A0F752C9BD84400C05E3F /* Assets.xcassets in Resources */,
+        1D1A0F772C9BD84500C05E3F /* LaunchScreen.storyboard in Resources */,
+      );
+      runOnlyForDeploymentPostprocessing = 0;
+    };
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+    1D1A0F622C9BD83F00C05E3F /* Sources */ = {
+      isa = PBXSourcesBuildPhase;
+      buildActionMask = 2147483647;
+      files = (
+        1D1A0F6E2C9BD84000C05E3F /* AppDelegate.swift in Sources */,
+        1D1A0F702C9BD84200C05E3F /* UnityBridge.swift in Sources */,
+        1D1A0F722C9BD84300C05E3F /* UnityViewController.swift in Sources */,
+      );
+      runOnlyForDeploymentPostprocessing = 0;
+    };
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+    1D1A0F7A2C9BD84600C05E3F /* Debug */ = {
+      isa = XCBuildConfiguration;
+      buildSettings = {
+        ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
+        CLANG_ENABLE_MODULES = YES;
+        GENERATE_INFOPLIST_FILE = NO;
+        INFOPLIST_FILE = ExpoUnity/Info.plist;
+        IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+        LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+        PRODUCT_BUNDLE_IDENTIFIER = com.example.expounity;
+        PRODUCT_NAME = "$(TARGET_NAME)";
+        SWIFT_VERSION = 5.0;
+        TARGETED_DEVICE_FAMILY = "1,2";
+      };
+      name = Debug;
+    };
+    1D1A0F7B2C9BD84600C05E3F /* Release */ = {
+      isa = XCBuildConfiguration;
+      buildSettings = {
+        ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
+        CLANG_ENABLE_MODULES = YES;
+        GENERATE_INFOPLIST_FILE = NO;
+        INFOPLIST_FILE = ExpoUnity/Info.plist;
+        IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+        LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+        PRODUCT_BUNDLE_IDENTIFIER = com.example.expounity;
+        PRODUCT_NAME = "$(TARGET_NAME)";
+        SWIFT_VERSION = 5.0;
+        TARGETED_DEVICE_FAMILY = "1,2";
+      };
+      name = Release;
+    };
+    1D1A0F7D2C9BD84700C05E3F /* Debug */ = {
+      isa = XCBuildConfiguration;
+      buildSettings = {
+        CLANG_ENABLE_MODULES = YES;
+        CURRENT_PROJECT_VERSION = 1;
+        IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+        SWIFT_VERSION = 5.0;
+      };
+      name = Debug;
+    };
+    1D1A0F7E2C9BD84700C05E3F /* Release */ = {
+      isa = XCBuildConfiguration;
+      buildSettings = {
+        CLANG_ENABLE_MODULES = YES;
+        CURRENT_PROJECT_VERSION = 1;
+        IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+        SWIFT_VERSION = 5.0;
+      };
+      name = Release;
+    };
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+    1D1A0F602C9BD83F00C05E3F /* Build configuration list for PBXProject "ExpoUnity" */ = {
+      isa = XCConfigurationList;
+      buildConfigurations = (
+        1D1A0F7D2C9BD84700C05E3F /* Debug */,
+        1D1A0F7E2C9BD84700C05E3F /* Release */,
+      );
+      defaultConfigurationIsVisible = 0;
+      defaultConfigurationName = Debug;
+    };
+    1D1A0F7C2C9BD84600C05E3F /* Build configuration list for PBXNativeTarget "ExpoUnity" */ = {
+      isa = XCConfigurationList;
+      buildConfigurations = (
+        1D1A0F7A2C9BD84600C05E3F /* Debug */,
+        1D1A0F7B2C9BD84600C05E3F /* Release */,
+      );
+      defaultConfigurationIsVisible = 0;
+      defaultConfigurationName = Debug;
+    };
+/* End XCConfigurationList section */
+  };
+  rootObject = 1D1A0F5E2C9BD83F00C05E3F /* Project object */;
+}

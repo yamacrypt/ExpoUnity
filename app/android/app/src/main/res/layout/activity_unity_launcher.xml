@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#111827"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="32dp">
+
+    <ImageView
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:src="@mipmap/ic_launcher"
+        android:contentDescription="Unity placeholder icon" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Unity Placeholder"
+        android:textColor="#f8fafc"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp" />
+
+    <TextView
+        android:id="@+id/unity_placeholder_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Unity Library を組み込むと、この画面が UnityPlayerActivity に置き換わります。"
+        android:textColor="#e2e8f0"
+        android:gravity="center"
+        android:textSize="16sp" />
+</LinearLayout>

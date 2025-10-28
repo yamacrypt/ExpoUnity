@@ -1,0 +1,11 @@
+rootProject.name = 'ExpoUnity'
+include ':app'
+
+def unityBuildDir = file('../unity/build/android')
+if (unityBuildDir.exists()) {
+  include ':unityLibrary'
+  project(':unityLibrary').projectDir = file("${unityBuildDir}/unityLibrary")
+  println("[Unity] Attached unityLibrary module at ${project(':unityLibrary').projectDir}")
+} else {
+  println('[Unity] unityLibrary not found. Run Unity export to generate Android library module.')
+}
