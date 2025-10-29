@@ -26,6 +26,23 @@ npm install --workspace packages/shared
 
 > **Note:** ネットワーク制限がある場合は lockfile を生成してから CI/CD にキャッシュしてください。
 
+### Docker Compose でのローカル開発
+
+```bash
+# モバイル向けの Expo 開発サーバー
+docker compose up app
+
+# Web (Vite) 開発サーバー
+docker compose up web
+
+# 両方をバックグラウンドで起動
+docker compose up -d
+```
+
+- `app` サービス: `expo start --dev-client` を実行し、`19000/19001/19002/8081` を公開します。
+- `web` サービス: Vite の `npm run dev` を実行し、`5173` を公開します。
+- ホットリロード対応のためリポジトリ全体をバインドマウントしつつ、`node_modules` はコンテナ側で保持するようボリューム分離しています。
+
 ### Expo Dev Client
 
 ```bash
